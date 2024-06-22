@@ -140,6 +140,86 @@ if 1<=A<=100 and 1<=B<=100 and 1<=C<=100:
     elif A<=C<=B or B<=C<=A:
         print(C)
 #27번
+N=int(input())
+num=2
+G=[]
+while True:
+    if N%num==0:    
+        N /= num
+        G.append(num)
+        continue
+    
+    if N%num!=0:
+        num +=1
+
+    if N==1:
+        break
+
+for l in G:
+    print(l)
+        
+#28번
+S=int(input())
+num=0
+R=0
+G=[]
+while S>=R:
+    num+=1
+    R+=num
+
+    G.append(R)
+    
+K=max(G)
+
+len_G=len(G)
+
+print(len_G-1)
+  
+#29번
+R_R=[]
+
+while True:
+    x,y=map(int,input().split())
+    
+    if x<=y:
+        result="No"
+    elif x>y:
+        result="Yes"
+    if x==0 and y==0:
+        break
+    R_R.append(result)
+    
+for l in R_R:
+    print(l)
+##30번
+q,w=map(int,input().split())
+a,s=map(int,input().split())
+z,x=map(int,input().split())
+
+
+if q==a:
+    result=z
+elif q==z:
+    result=a
+elif a==z:
+    result=q
+
+
+
+if w==s:
+    result_1=x
+elif w==x:
+    result_1=s
+elif s==x:
+    result_1=w
+
+
+print(result,result_1)
+
+
+
+
+
 
 
 
